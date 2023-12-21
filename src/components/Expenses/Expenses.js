@@ -13,7 +13,7 @@ const Expenses = (props) => {
       <ExpenseItem
         key={i} 
         expenseName={item.expenseName}
-        locationOfExpenditure = {item.locationOfExpenditure}
+        location= {item.location}
         amount={item.amount}
         date={item.date}
       />

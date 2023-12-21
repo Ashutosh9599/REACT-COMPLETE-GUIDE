@@ -2,9 +2,9 @@ import Expenses from './components/Expenses/Expenses';
 
 function App() {
   const expenses = [
-    { id: 1, date: new Date(2023, 12, 18), expenseName: 'Food', amount: 'Rs 10', locationOfExpenditure: 'Grocery Store' },
-    { id: 2, date: new Date(2023, 12, 18), expenseName: 'Petrol', amount: 'Rs 100', locationOfExpenditure: 'Gas Station' },
-    { id: 3, date: new Date(2023, 12, 18), expenseName: 'Movies', amount: 'Rs 200', locationOfExpenditure: 'Cinema' },
+    { id: 1, date: new Date(2023, 12, 18), expenseName: 'Food', amount: 'Rs 10', location: 'Grocery Store' },
+    { id: 2, date: new Date(2023, 12, 18), expenseName: 'Petrol', amount: 'Rs 100', location: 'Gas Station' },
+    { id: 3, date: new Date(2023, 12, 18), expenseName: 'Movies', amount: 'Rs 200', location: 'Cinema' },
   ];
 
   // const expenseItems = [];
@@ -16,7 +16,7 @@ function App() {
   //       date={expense.date}
   //       expenseName={expense.expenseName}
   //       amount={expense.amount}
-  //       locationOfExpenditure={expense.locationOfExpenditure}
+  //       location={expense.location}
   //     />
   //   );
   // }
