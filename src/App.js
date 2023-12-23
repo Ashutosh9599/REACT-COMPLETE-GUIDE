@@ -1,8 +1,10 @@
-import Expenses from './components/Expenses/Expenses';
+import React, { useState } from 'react';
+
 import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './components/Expenses/Expenses';
 
 function App() {
-  const expenses = [
+  const DUMMY_EXPENSES = [
     { id: 1, date: new Date(2023, 12, 18), expenseName: 'Food', amount: '10', location: 'Grocery Store' },
     { id: 2, date: new Date(2023, 12, 18), expenseName: 'Petrol', amount: '500', location: 'Gas Station' },
     { id: 3, date: new Date(2023, 12, 18), expenseName: 'Movies', amount: '200', location: 'Cinema' },
@@ -21,9 +23,12 @@ function App() {
   //     />
   //   );
   // }
-  const addExpenseHandler = expense => {
-    console.log('In App.js');
-    console.log(expense);
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
   return (
     <div className="expense-list">
